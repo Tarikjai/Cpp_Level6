@@ -1,7 +1,25 @@
 #include <iostream>
 using namespace std;
-  
+
+
+
+
+
+
 int main()
 {
-	cout << "Result: " << (8 & 876876);
+	DisplayResult(InputNmber());
+
+}
+
+
+int InputNmber() {
+	int Number;
+	cout << "What's your age? ";
+	cin >> Number;
+	return Number;
+}
+
+void DisplayResult(int Number) {
+	cout << "My age is: " << Number;
 }

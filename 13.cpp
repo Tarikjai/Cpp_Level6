@@ -3,5 +3,5 @@ using namespace std;
 
 int main()
 {
-	cout << "Result: " << (72 & 26);
+	cout << "Result: " << (72 | 26);
 }
