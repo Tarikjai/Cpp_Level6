@@ -2,7 +2,7 @@
 using namespace std;
 void Function4()
 {
-	cout << "Hi I'm function 4 " << endl;
+	cout << "Hi I'm function4 " << endl;
 }
 void Function3()
 {
