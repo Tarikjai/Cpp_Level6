@@ -3,23 +3,40 @@
 
 using namespace std;
 
-int main() {
+void ReadNumber(vector <int>& vNumber) {
 
-	vector <int> vNumber;
-	vNumber.push_back(10);
-	vNumber.push_back(20);
-	vNumber.push_back(30);
-	vNumber.push_back(40);
-	vNumber.push_back(50);
+	int Number;
+	 
+	cout << "Please enter a number: ";
+	cin >> Number;
+	cout <<  endl;
 
-	cout << "Numbers vectpr : " << "\n\n";
+	vNumber.push_back(Number);
+	
+}
 
-	for (int& Number : vNumber) {
-		cout << Number << endl;
+
+void printNumber(vector <int>& vNumber) {
+	cout << "\nAll vectors element : "; 
+	for (int& number : vNumber) {
+		cout << number << ", ";
 	}
-
 	cout << endl;
 
 }
-//2 functioon ,  readNumbers(int vector) => ask to enter number
-// printNumber();
+
+int main() {
+	string Play = "Y";
+	vector <int> vNumber;
+
+	do {
+		ReadNumber(vNumber);
+
+		cout << "Would you like to add a new Number (Y/N)? ";
+		cin >> Play;
+	} while (Play == "Y" || Play == "y");
+
+	printNumber(vNumber);
+	 
+}
+ 
