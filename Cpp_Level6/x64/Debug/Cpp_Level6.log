@@ -1,4 +1,11 @@
-﻿  29.cpp
-C:\Users\Professional\Documents\C++\Cpp_Level6\29.cpp(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\Professional\Documents\C++\Cpp_Level6\29.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  Cpp_Level6.vcxproj -> C:\Users\Professional\Documents\C++\Cpp_Level6\x64\Debug\Cpp_Level6.exe
+﻿  30.cpp
+C:\Users\Professional\Documents\C++\Cpp_Level6\30.cpp(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Professional\Documents\C++\Cpp_Level6\30.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Professional\Documents\C++\Cpp_Level6\30.cpp(40,22): error C2440: 'initializing': cannot convert from '_Ty' to 'int'
+C:\Users\Professional\Documents\C++\Cpp_Level6\30.cpp(40,22): error C2440:         with
+C:\Users\Professional\Documents\C++\Cpp_Level6\30.cpp(40,22): error C2440:         [
+C:\Users\Professional\Documents\C++\Cpp_Level6\30.cpp(40,22): error C2440:             _Ty=Student
+C:\Users\Professional\Documents\C++\Cpp_Level6\30.cpp(40,22): error C2440:         ]
+      C:\Users\Professional\Documents\C++\Cpp_Level6\30.cpp(40,22):
+      No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+  
