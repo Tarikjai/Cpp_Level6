@@ -3,6 +3,61 @@
 
 using namespace std;
 
+struct Employee {
+	string Name;
+	string Lastname;
+	int Salary;
+};
+
+void ReadEmployeesInfo(vector <Employee>& vInfo) {
+	string EnterEmplyee = "Y";
+
+	while (EnterEmplyee == "Y" || EnterEmplyee == "y") {
+		Employee e;
+
+		cout << "Please enter the employee name: " ;
+		cin >> e.Name;
+		cout << "Please enter the employee Lastname: " ;
+		cin >> e.Lastname;
+		cout << "Please enter the employee Salary: " ;
+		cin >> e.Salary;
+		vInfo.push_back(e);
+
+		cout << "\n\nWanna add more employees (Y/N)? ";
+		cin >> EnterEmplyee;
+		
+		cout << endl;
+	}
+}
+;
+
+void PrintEmployeesInfo(vector <Employee>  vInfo) {
+
+	for (Employee & i : vInfo) {
+		cout  << endl;
+		  cout << "FirstName: " << i.Name << endl;
+		  cout << "Lastname: " << i.Lastname << endl;
+		  cout << "Salary: " << i.Salary << endl;
+
+	}
+}
+
+
+int main() {
+	vector <Employee> vInfo;
+
+	ReadEmployeesInfo(vInfo);
+	PrintEmployeesInfo(vInfo);
+}
+
+
+
+
+
+
+
+
+/*
 struct Student {
 	string Name;
 	int Age;
@@ -63,4 +118,4 @@ int main() {
 
 
 
-}
+}*/
