@@ -13,7 +13,7 @@ int main() {
 
 	StEmployee Employee, * ptr;
 
-	Employee.Name = "Claude";
+	Employee.Name = "Claudee";
 	Employee.Salary = 999;
 
 	cout << Employee.Name << endl;
