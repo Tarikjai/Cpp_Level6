@@ -5,24 +5,22 @@ using namespace std;
 
 
 int main() {
+	void* ptr;
+	
+	int x = 10;
 
-	struct StEmployee {
-		string Name;
-		int Salary;
-	};
+	ptr = &x;
 
-	StEmployee Employee, * ptr;
+	cout << *(static_cast<int*>(ptr));
 
-	Employee.Name = "Claudee";
-	Employee.Salary = 999;
+	float y = 5.2;
+	
+	ptr = &y;
 
-	cout << Employee.Name << endl;
-	cout << Employee.Salary << endl;
 
-	cout << "Using pointer: " << endl;
+	cout << *(static_cast<float*>(ptr));
 
-	ptr = &Employee;
-	cout << ptr->Name << endl;
-	cout << ptr->Salary << endl;
+
+
 
 }
