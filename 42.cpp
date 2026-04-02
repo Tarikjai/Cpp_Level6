@@ -10,15 +10,15 @@ int main() {
 	int x = 10;
 
 	ptr = &x;
-
-	cout << *(static_cast<int*>(ptr));
+	cout << ptr << endl;
+	cout << *(static_cast<int*>(ptr)) << endl;
 
 	float y = 5.2;
 	
 	ptr = &y;
 
-
-	cout << *(static_cast<float*>(ptr));
+	cout << ptr << endl;
+	cout << *(static_cast<float*>(ptr)) << endl;
 
 
 
