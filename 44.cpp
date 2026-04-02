@@ -15,13 +15,18 @@ int main() {
 
 	ptr = new float[num];
 
-
-	for (int i = 0; i <= num, i++){
-		cout << "Student :"
+	cout << "Enter each student grade: " << endl;
+	for (int i = 0; i < num; i++) {
+		cout << "Student " << i + 1 << ": ";
+		cin >> *(ptr + i);
 	}
 	 
+	cout << "\nDisplay student grade: " << endl;
+	for (int i = 0; i < num; i++) {
+		cout << "Student " << i + 1 << ": ";
+		cout << *(ptr + i) << endl;
+	}
 
-
-
+	delete[] ptr;
 
 }
