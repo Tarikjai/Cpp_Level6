@@ -8,7 +8,28 @@ using namespace std;
 
 void LoadDataFromVectorToFile(string FileName, vector <string> vFileContent) {
  
+	fstream MyFile;
 
+	MyFile.open(FileName, ios::in);
+
+
+
+	if (MyFile.is_open()) {
+		string line;
+
+		while (getline(MyFile, line)) {
+
+			//cout << line << endl;
+
+			string 
+
+
+
+		}
+		MyFile.close();
+
+
+	}
 
 
 }
@@ -16,8 +37,8 @@ void LoadDataFromVectorToFile(string FileName, vector <string> vFileContent) {
 
 
 int main() {
-	vector <string> vNames;
+	vector <string> vFileContent;
  
-	LoadDataFromVectorToFile("", vFileContent);
+	LoadDataFromVectorToFile("text.txt", vFileContent);
 
 }
