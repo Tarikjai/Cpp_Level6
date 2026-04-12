@@ -14,24 +14,48 @@ void LoadFileFromFileToVector(string vFileContent, vector <string>& vVectorConte
 	string line;
 
 	while (getline(MyFile, line)) {
-	
-	  vVectorContent.push_back(line);
+		if (line != "Ali") {
+			vVectorContent.push_back(line);
+		}
+		else {
+			vVectorContent.push_back("");
+		}
 	}
-
 }
 
-void SaveVectorToFile();
+void SaveVectorToFile(string FileContent, vector <string>& vVectorContent) {
+
+	fstream MyFile;
+
+	MyFile.open(FileContent, ios::out);
+
+
+	for (string& line : vVectorContent) {
+		if (line != "") {
+			MyFile << line;
+		}
+		
+	}
+
+	
+	MyFile.close();
+}
+;
 
 void DeleteRecordFromFile(string FileContent, string Record) {
 	vector <string> vVectorContent;
 
 	LoadFileFromFileToVector(FileContent, vVectorContent);
-	cout << "\nVector before " << endl;
-	for (string& line : vVectorContent) {
-		if (line == Record){
-			vVectorContent.push_back
-	}
 
+
+	
+	for (string& line : vVectorContent) {
+		if (line != Record) {
+			 line = "";
+		}
+		SaveVectorToFile(FileContent, vVectorContent);
+	}
+		//
 }
 
 void PrintFileContent(string FileContent) {
