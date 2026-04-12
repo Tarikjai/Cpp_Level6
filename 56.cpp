@@ -11,8 +11,6 @@ void LoadDataFromVectorToFile(string FileName, vector <string> vFileContent) {
 	fstream MyFile;
 	MyFile.open(FileName, ios::out);
 
-	 
-
 	if (MyFile.is_open()) {
 
 		for (string Line : vFileContent) {
@@ -22,8 +20,6 @@ void LoadDataFromVectorToFile(string FileName, vector <string> vFileContent) {
 			{
 				MyFile << Line << endl;
 			}
-
-
 		}
 		MyFile.close();
 		 
