@@ -4,7 +4,7 @@
 #include <vector>
 
 using namespace std;
- 
+
 
 void LoadFileFromFileToVector(string FileName, vector <string>& vFileContent) {
 
@@ -14,12 +14,10 @@ void LoadFileFromFileToVector(string FileName, vector <string>& vFileContent) {
 	string line;
 
 	while (getline(MyFile, line)) {
-		if (line != "Ali") {
+
 			vFileContent.push_back(line);
-		}
-		else {
-			vFileContent.push_back("");
-		}
+		
+	
 	}
 }
 
@@ -31,32 +29,32 @@ void SaveVectorToFile(string FileName, vector <string>& vFileContent) {
 
 
 	for (string& line : vFileContent) {
-		if (line != "") {
+		//if (line != "") {
 			MyFile << line << endl;
-		}
-		
+		//}
+
 	}
 
-	
+
 	MyFile.close();
 }
 ;
 
-void ChangeRecordFromFile(string FileName, string Record) {
+void ChangeRecordFromFile(string FileName, string Record, string UpdateTo) {
 	vector <string> vVectorContent;
 
 	LoadFileFromFileToVector(FileName, vVectorContent);
 
 
-	
+
 	for (string& line : vVectorContent) {
-	
+
 		if (line == Record) {
-			 line = "";
+			line = UpdateTo;
 		}
 		SaveVectorToFile(FileName, vVectorContent);
 	}
-		//
+	//
 }
 
 void PrintFileContent(string FileName) {
@@ -84,10 +82,10 @@ int main() {
 	PrintFileContent("text.txt");
 
 
-	ChangeRecordFromFile("text.txt","Ali");
+	ChangeRecordFromFile("text.txt", "Omar","Hmida");
 
 
 	cout << "\n\nFile content after edit: " << endl;
 	PrintFileContent("text.txt");
-	
+
 }
