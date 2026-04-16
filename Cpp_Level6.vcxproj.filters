@@ -177,5 +177,8 @@
     <ClCompile Include="60.cpp">
       <Filter>Resource Files\Level_06</Filter>
     </ClCompile>
+    <ClCompile Include="01.cpp">
+      <Filter>Resource Files\Level_07</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
