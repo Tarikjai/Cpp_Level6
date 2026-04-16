@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\Level_06">
+      <UniqueIdentifier>{d18371e4-5049-4003-80f7-4a78ad091258}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cpp_Level6.cpp">
@@ -36,19 +39,19 @@
     <ClCompile Include="14_Declaration Vs Definition.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="15.cpp">
+    <ClCompile Include="15_Default_Parameters.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="16.cpp">
+    <ClCompile Include="16_Function Overloading.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="17.cpp">
+    <ClCompile Include="17_Call Stack_Call Hierarchy.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="18.cpp">
+    <ClCompile Include="18_VS Function Tips.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="19.cpp">
+    <ClCompile Include="19_Recursion.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
     <ClCompile Include="20.cpp">
