@@ -72,7 +72,7 @@
     <ClCompile Include="26.cpp">
       <Filter>Resource Files\Level_06</Filter>
     </ClCompile>
-    <ClCompile Include="27.cpp">
+    <ClCompile Include="27_Two Dimensional Arrays.cpp">
       <Filter>Resource Files\Level_06</Filter>
     </ClCompile>
     <ClCompile Include="28.cpp">
@@ -174,5 +174,10 @@
     <ClCompile Include="01.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
