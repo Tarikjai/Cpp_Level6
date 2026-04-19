@@ -54,16 +54,16 @@
     <ClCompile Include="19_Recursion.cpp">
       <Filter>Resource Files\Level_06</Filter>
     </ClCompile>
-    <ClCompile Include="20.cpp">
+    <ClCompile Include="20_Static_Variablers.cpp">
       <Filter>Resource Files\Level_06</Filter>
     </ClCompile>
-    <ClCompile Include="21.cpp">
+    <ClCompile Include="21_Automatic Variables.cpp">
       <Filter>Resource Files\Level_06</Filter>
     </ClCompile>
-    <ClCompile Include="23.cpp">
+    <ClCompile Include="23_Integer Format %28printf%29.cpp">
       <Filter>Resource Files\Level_06</Filter>
     </ClCompile>
-    <ClCompile Include="24.cpp">
+    <ClCompile Include="24_Float Format %28printf%29.cpp">
       <Filter>Resource Files\Level_06</Filter>
     </ClCompile>
     <ClCompile Include="25.cpp">
