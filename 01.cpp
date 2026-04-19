@@ -17,11 +17,11 @@ void GenerateRandomNumber(int arr[3][3], int Rows, int Column) {
 }
 
 
-void PrintRandomNumber(int arr[3][3]) {
+void PrintRandomNumber(int arr[3][3], int Rows, int Column) {
 
-	for (int i = 0; i < 3; i++) {
-		for (int j = 0; j < 3; j++) {
-			cout << arr[i][j] << " ";
+	for (int i = 0; i < Rows; i++) {
+		for (int j = 0; j < Column; j++) {
+			cout << setw(3) << arr[i][j] << "   ";
 		}
 		cout << endl;
 
@@ -35,9 +35,10 @@ int main() {
 
 	
 	GenerateRandomNumber(arr,3,3);
-	PrintRandomNumber(arr);
+	cout << "\n The following is a random matrix:\n";
+	PrintRandomNumber(arr, 3, 3);
 	
-	//
+	 
 
 
 		
