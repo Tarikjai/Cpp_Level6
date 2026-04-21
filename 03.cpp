@@ -15,6 +15,7 @@ void FillMatrixWithRandomNumbers(int arr[3][3], int Rows, int Column) {
 	}
 
 }
+
 void PrintMatrix(int arr[3][3], int Rows, int Column) {
 
 	for (int i = 0; i < Rows; i++) {
@@ -27,44 +28,51 @@ void PrintMatrix(int arr[3][3], int Rows, int Column) {
 
 }
 
-
-
 int RowSum(int arr[3][3], int i, int Column) {
 
 	int sum = 0;
-		for (int j = 0; j <= Column -1; j++) {
-			sum += arr[i][j];
-		}
+	for (int j = 0; j <= Column - 1; j++) {
+		sum += arr[i][j];
+	}
 
 	return sum;
 }
 
 
-void PrintSumRows(int arr[3][3], int Rows, int Column) {
-
-	cout << "\nThe following are the sum  for each row in the matrix :\n";
+void SumMatrixRowsInArray(int arr[3][3], int Rows, int Column, int SumArr[3]) {
 
 	for (int i = 0; i < Rows; i++) {
-	
-	
-		cout << " Row " << i +1 << " Sum = " << RowSum( arr, i,  Column);
-		cout << endl;
 
+		 SumArr[i] = RowSum(arr, i, Column);
+
+		cout << endl;
 	}
 
+}
+
+
+
+void PrintRowsSumArray(int SumArr[3], int Rows) {
+
+	cout << "\nThe following are the sum  for each row in the matrix :\n";
+	for (int i = 0; i < Rows; i++) {
+		cout <<"Row " << i + 1 << " = " << SumArr[i];
+		cout << endl;
+	}
 }
 
 
 int main() {
 
 	int arr[3][3];
-
+	int SumArr[3];
 
 	FillMatrixWithRandomNumbers(arr, 3, 3);
-	cout << "\n The following is a random matrix:\n";
+	cout << "\n The following is a 3*3 random matrix:\n";
 	PrintMatrix(arr, 3, 3);
 
-	
-	PrintSumRows(arr, 3, 3);
+	SumMatrixRowsInArray(arr, 3, 3, SumArr);
+
+	PrintRowsSumArray(SumArr, 3);
 
 }

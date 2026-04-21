@@ -5,7 +5,7 @@
 using namespace std;
 
 
-void GenerateRandomNumber(int arr[3][3], int Rows, int Column) {
+void FillMatrixWithRandomNumbers(int arr[3][3], int Rows, int Column) {
 
 	for (int i = 0; i < Rows; i++) {
 		for (int j = 0; j < Column; j++) {
@@ -17,7 +17,7 @@ void GenerateRandomNumber(int arr[3][3], int Rows, int Column) {
 }
 
 
-void PrintRandomNumber(int arr[3][3], int Rows, int Column) {
+void PrintMatrix(int arr[3][3], int Rows, int Column) {
 
 	for (int i = 0; i < Rows; i++) {
 		for (int j = 0; j < Column; j++) {
@@ -34,9 +34,9 @@ int main() {
 	int arr[3][3];
 
 	
-	GenerateRandomNumber(arr,3,3);
+	FillMatrixWithRandomNumbers(arr,3,3);
 	cout << "\n The following is a random matrix:\n";
-	PrintRandomNumber(arr, 3, 3);
+	PrintMatrix(arr, 3, 3);
 	
 	 
 
