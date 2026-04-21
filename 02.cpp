@@ -32,8 +32,6 @@ void PrintRandomNumber(int arr[3][3], int Rows, int Column) {
 int RowSum(int arr[3][3], int i, int Column) {
 
 	int sum = 0;
-
-
 		for (int j = 0; j <= Column -1; j++) {
 			sum += arr[i][j];
 		}
@@ -44,7 +42,7 @@ int RowSum(int arr[3][3], int i, int Column) {
 
 void PrintSumRows(int arr[3][3], int Rows, int Column) {
 
-	cout << "\nThe following are the sum for each row in the matrix :\n";
+	cout << "\nThe following are the sum  for each row in the matrix :\n";
 
 	for (int i = 0; i < Rows; i++) {
 	
