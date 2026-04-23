@@ -3,66 +3,62 @@
 #include "MyLib.h"
 
 using namespace std;
-
-void FillArrayWithRadom3X3(int arr[3][3], int Rows, int Cols) {
-
+ 
+void GenerateMatrix3X3(int arr[3][3], int Rows, int Cols) {
 	for (int i = 0; i < Rows; i++) {
-		for (int j = 0; j < Rows; j++) {
-			arr[i][j] = MyLib::RandomNumber(1, 9);
+		for (int j = 0; j < Cols; j++) {
+			arr[i][j] = MyLib::RandomNumber(1, 3);
 		}
 	}
 }
- 
-void printRadom3X3(int arr[3][3], int Rows, int j) {
+void PrintMatrix3X3(int arr[3][3], int Rows, int Cols) {
 
-	cout << "\nThe following is a 3x3 random matrix:\n";
+	cout << "The following is a 3x3 random matrix: \n";
 
 	for (int i = 0; i < Rows; i++) {
-		for (int j = 0; j < Rows; j++) {
-			cout << setw(3) << arr[i][j] << "   ";
+		for (int j = 0; j < Cols; j++) {
+			cout << setw(3)<< arr[i][j] << "   ";
 		}
 		cout << endl;
 	}
 }
 
 
+int SumCols(int arr[3][3], int Rows, int Cols) {
 
-int SumCols(int arr[3][3], int Rows, int j) {
-	
-	int sum = 0;
+	int Sum = 0;
 
-		for (int i = 0; i < Rows; i++) {
-
-			sum += arr[i][j];
+	for (int i = 0; i < Rows; i++) {
+		
+			Sum += arr[i][Cols];
 		
 	}
-	return sum;
-
-
+	return Sum;
 }
 
 
-void PrintSumCols(int arr[3][3], int Rows, int Cols) {
 
-	cout << "\nThe following are the  sum of each col in the matrix: \n";
-	for (int j = 0; j<= Cols-1;j++) {
+void PrintColsSum(int arr[3][3], int Rows, int Cols) {
 
-		cout << "Col " << j + 1 << " Sum = " << SumCols(arr, Rows, j) << endl;
+	cout << "\nThe following are the sum of each col in the matrix: \n";
+
+	for (int i = 0; i <= Cols - 1; i++) {
+		cout << " Col " << i + 1 << " Sum = "  << SumCols(arr, Rows, i ) << endl;
 	}
-	
-}
 
+
+	cout << endl;
+}
 
 
 
 int main() {
-
+	 
 	int arr[3][3];
 
-	FillArrayWithRadom3X3(arr, 3, 3);
+	GenerateMatrix3X3(arr, 3,3);
+	PrintMatrix3X3(arr, 3, 3);
 
-	printRadom3X3(arr, 3, 3);
-
-	PrintSumCols(arr, 3, 3);
+	PrintColsSum(arr, 3, 3);
 
 }
