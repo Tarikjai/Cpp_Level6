@@ -44,7 +44,7 @@ int SumCols(int arr[3][3], int Rows, int j) {
 
 void PrintSumCols(int arr[3][3], int Rows, int Cols) {
 
-	cout << "\nThe following are the sum of each col in the matrix: \n";
+	cout << "\nThe following are the  sum of each col in the matrix: \n";
 	for (int j = 0; j<= Cols-1;j++) {
 
 		cout << "Col " << j + 1 << " Sum = " << SumCols(arr, Rows, j) << endl;
