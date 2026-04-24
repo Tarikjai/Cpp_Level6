@@ -7,7 +7,7 @@ using namespace std;
 void GenerateMatrix3X3(int arr[3][3], int Rows, int Cols) {
 	for (int i = 0; i < Rows; i++) {
 		for (int j = 0; j < Cols; j++) {
-			arr[i][j] = MyLib::RandomNumber(1, 3);
+			arr[i][j] = MyLib::RandomNumber(1, 10);
 		}
 	}
 }
@@ -43,7 +43,7 @@ void InputColsSum(int arr[3][3], int Rows, int Cols, int NewArr[3]) {
 	cout << endl;
 }
 
-void PrintColsSum(int NewArr[3], int Rows, int Cols) {
+void PrintColsSum(int NewArr[3], int Cols) {
 
 	 cout << "\nThe following are the sum of each col in the matrix: \n";
 
@@ -64,5 +64,5 @@ int main() {
 
 	InputColsSum(arr, 3, 3, NewArr);
 	
-	PrintColsSum(NewArr, 3, 3);
+	PrintColsSum(NewArr, 3);
 }
