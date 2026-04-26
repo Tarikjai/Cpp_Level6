@@ -192,7 +192,10 @@
     <ClCompile Include="07_transposedMatrix.cpp">
       <Filter>Resource Files\Level_07</Filter>
     </ClCompile>
-    <ClCompile Include="08.cpp">
+    <ClCompile Include="08_Multiply_Matrix.cpp">
+      <Filter>Resource Files\Level_07</Filter>
+    </ClCompile>
+    <ClCompile Include="09_.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
