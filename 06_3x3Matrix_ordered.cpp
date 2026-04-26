@@ -6,11 +6,12 @@ using namespace std;
 
 void Generate3X3Matrix(int arr[3][3], int Rows, int Cols) {
 
-	int sum = 1;
+	short counter = 0;
+
 	for (int i = 0; i < Rows; i++) {
 		for (int j = 0; j < Rows; j++) {
-
-			arr[i][j] += sum; 
+			counter++;
+			arr[i][j] = counter;
 		}
 		
 	}
@@ -18,10 +19,11 @@ void Generate3X3Matrix(int arr[3][3], int Rows, int Cols) {
 
 void PrintMatrix(int arr[3][3], int Rows, int Cols) {
 
+	cout << "The following is a 3x3 ordered matrix: " << endl; 
 	for (int i = 0; i < Rows; i++) {
 		for (int j = 0; j < Rows; j++) {
 
-			cout << setw(3) << arr[i][j] << " ";
+			cout << setw(3) << arr[i][j] << "    ";
 		}
 		cout << endl;
 	}
