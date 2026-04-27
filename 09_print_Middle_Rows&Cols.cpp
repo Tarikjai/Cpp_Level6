@@ -7,7 +7,7 @@ using namespace std;
 void FillMatrixWithRandomNumbers(int arr1[3][3], int Rows, int Cols) {
 	for (int i = 0; i < Rows; i++) {
 		for (int j = 0; j < Cols; j++) {
-			arr1[i][j] = MyLib::RandomNumber(1, 10);
+			arr1[i][j] = MyLib::RandomNumber(1, 11);
 		}
 	}
 }
@@ -28,25 +28,26 @@ void Print3x3Matrix(int arr[3][3], int Rows, int Cols) {
 
 void PrintMiddleRowMatrix(int arr[3][3], int Rows, int Cols) {
 
-	for (int i = 1; i <=1 ; i++) {
+	short MiddleRow = Rows / 2;
 		for (int j = 0; j < Cols; j++) {
 			//cout << setw(3) << arr[i][j] << "  ";
-			printf(" %0*d   ", 2, arr[i][j]);
+			printf(" %0*d   ", 2, arr[MiddleRow][j]);
 		}
 		cout << endl;
-	}
+	
 
 }
 
 void PrintMiddleColMatrix(int arr[3][3], int Rows, int Cols) {
 
-	for (int i = 0; i <= Rows-1; i++) {
-		for (int j = 1; j <=1; j++) {
+	short MiddleCols = Cols / 2;
+	 
+		for (int j = 0; j < Rows; j++) {
 			//cout << setw(3) << arr[i][j] << "  ";
-			printf(" %0*d   ", 2, arr[i][j]);
+			printf(" %0*d   ", 2, arr[j][MiddleCols]);
 		}
 		
-	}
+	
 
 }
 
