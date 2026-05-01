@@ -27,7 +27,7 @@ void Print3x3Matrix(int Arr[3][3], int Rows, int Cols) {
 
 int CountNumberInMatrix(int Matrix1[3][3], int Rows, int Cols, int CountNumber) {
 
-	int counter=0;
+	int counter = 0;
 
 	for (int i = 0; i < Rows; i++) {
 		for (int j = 0; j < Rows; j++) {
@@ -40,7 +40,7 @@ int CountNumberInMatrix(int Matrix1[3][3], int Rows, int Cols, int CountNumber) 
 	}
 
 	return counter;
- }
+}
 
 
 
@@ -56,7 +56,7 @@ int main() {
 
 	int CountNumber = MyLib::AskNumber("\nEnter the number to count in matrix? ");
 
-	cout << "Number "<< CountNumber << " count in matrix is: "<< CountNumberInMatrix(Matrix1, 3, 3, CountNumber);
+	cout << "Number " << CountNumber << " count in matrix is: " << CountNumberInMatrix(Matrix1, 3, 3, CountNumber);
 
 
 
