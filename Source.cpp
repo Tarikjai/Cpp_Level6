@@ -4,7 +4,7 @@
 
 using namespace std;
 
- 
+
 void Print3x3Matrix(int Arr[3][3], int Rows, int Cols) {
 
 	for (int i = 0; i < Rows; i++) {
@@ -17,71 +17,57 @@ void Print3x3Matrix(int Arr[3][3], int Rows, int Cols) {
 
 }
 
-int CheckNumberPresence(int Matrix1[3][3], int Rows, int Cols) {
+int CheckMinimumNumber(int Matrix1[3][3], int Rows, int Cols) {
 
-	
-	int NumberToCheck = MyLib::AskNumber("\nPlease Enter the number to look for in matrix: ");
+
+	int Minimum = Matrix1[0][0];
 
 	for (int i = 0; i < Rows; i++) {
 		for (int j = 0; j < Rows; j++) {
 
-			if (Matrix1[i][j] == NumberToCheck) {
-				return true;
+			if (Matrix1[i][j] < Minimum ) {
+				Minimum = Matrix1[i][j];
 			}
 
 		}
 	}
-	return false;
+	return Minimum;
 }
 
-int checkIfPresent(int input, int Matrix2[3][3], int Rows, int Cols) {
-	
+int CheckMaximumNumber(int Matrix1[3][3], int Rows, int Cols) {
+
+
+	int Maximum = Matrix1[0][0];
+
 	for (int i = 0; i < Rows; i++) {
-		for (int j = 0; j < Cols; j++) {
+		for (int j = 0; j < Rows; j++) {
 
-			if (input == Matrix2[i][j]) {
-				return  Matrix2[i][j];
+			if (Matrix1[i][j] > Maximum) {
+				Maximum = Matrix1[i][j];
 			}
-		
-			
+
 		}
 	}
+	return Maximum;
 }
 
-
-void PrintIntersectedNumbers(int Matrix1[3][3], int Matrix2[3][3], int Rows, int Cols) {
-
-	cout << "Intersected Numners are: \n" << endl;
-	for (int i = 0; i < Rows; i++) {
-		for (int j = 0; j < Cols; j++) {
-
-			if (Matrix1[i][j]== checkIfPresent(Matrix1[i][j], Matrix2, 3, 3) ) {
-				
-
-				cout << setw(3) <<Matrix1[i][j];
-			}
-		}
-	}
-}
-
-
+ 
 
 int main() {
 
-	int Matrix1[3][3] = { {77,5,12},{22,20,1},{1,0,9} };
-    int	Matrix2[3][3] = { {5,80,90},{22,77,1},{10,8,33} };
+	int Matrix1[3][3] = { {77,5,12},{22,20,6},{14,3,9} };
+
 
 	cout << "Matrix1: " << endl;
 	Print3x3Matrix(Matrix1, 3, 3);
 
-	cout << "\nMatrix2: " << endl;
-	Print3x3Matrix(Matrix2, 3, 3);
+ 
 
 
-	PrintIntersectedNumbers(Matrix1, Matrix2, 3, 3);
+	cout << "\nMinimum Number is: " << CheckMinimumNumber(Matrix1, 3, 3) << endl;
 
+	cout << "\nMaximum Number is: " << CheckMaximumNumber(Matrix1, 3, 3) << endl;
 
-	
 
 
 	system("pause>0");

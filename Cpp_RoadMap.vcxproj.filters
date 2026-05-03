@@ -222,6 +222,12 @@
     <ClCompile Include="17_Check_Number.cpp">
       <Filter>Resource Files\Level_07</Filter>
     </ClCompile>
+    <ClCompile Include="18_Intersected.cpp">
+      <Filter>Resource Files\Level_07</Filter>
+    </ClCompile>
+    <ClCompile Include="19_.cpp">
+      <Filter>Resource Files\Level_07</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyLib.h">
