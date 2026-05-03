@@ -17,59 +17,71 @@ void Print3x3Matrix(int Arr[3][3], int Rows, int Cols) {
 
 }
 
+int CheckNumberPresence(int Matrix1[3][3], int Rows, int Cols) {
 
-
-int CountNumberInMatrix(int Matrix1[3][3], int Rows, int Cols, int CountNumber) {
-
-	int counter = 0;
+	
+	int NumberToCheck = MyLib::AskNumber("\nPlease Enter the number to look for in matrix: ");
 
 	for (int i = 0; i < Rows; i++) {
 		for (int j = 0; j < Rows; j++) {
 
-			if (Matrix1[i][j] == CountNumber) {
-				counter++;
+			if (Matrix1[i][j] == NumberToCheck) {
+				return true;
 			}
 
 		}
 	}
+	return false;
+}
 
-	return counter;
+int checkIfPresent(int input, int Matrix2[3][3], int Rows, int Cols) {
+	
+	for (int i = 0; i < Rows; i++) {
+		for (int j = 0; j < Cols; j++) {
+
+			if (input == Matrix2[i][j]) {
+				return  Matrix2[i][j];
+			}
+		
+			
+		}
+	}
 }
 
 
+void PrintIntersectedNumbers(int Matrix1[3][3], int Matrix2[3][3], int Rows, int Cols) {
 
+	cout << "Intersected Numners are: \n" << endl;
+	for (int i = 0; i < Rows; i++) {
+		for (int j = 0; j < Cols; j++) {
 
+			if (Matrix1[i][j]== checkIfPresent(Matrix1[i][j], Matrix2, 3, 3) ) {
+				
 
-bool IsSparseMatrix(int Matrix1[3][3], int Rows, int Cols) {
-
-	short NomberOfNumbers = Rows * Cols;
-
-
-	return ((CountNumberInMatrix(Matrix1, Rows, Cols, 0) >= NomberOfNumbers / 2));
+				cout << setw(3) <<Matrix1[i][j];
+			}
+		}
+	}
 }
-
-
-
-
 
 
 
 int main() {
 
-	int Matrix1[3][3] = { {1,0,0}, {0,1,0}, {1,0,1} };
- 
+	int Matrix1[3][3] = { {77,5,12},{22,20,1},{1,0,9} };
+    int	Matrix2[3][3] = { {5,80,90},{22,77,1},{10,8,33} };
 
 	cout << "Matrix1: " << endl;
 	Print3x3Matrix(Matrix1, 3, 3);
-	 
 
-	if (IsSparseMatrix(Matrix1, 3, 3)) {
-		cout << "\nYes, It is sparce";   
-	}
-	else {
-		cout << "\nNo, It's NOT sparce";
-	}
+	cout << "\nMatrix2: " << endl;
+	Print3x3Matrix(Matrix2, 3, 3);
 
+
+	PrintIntersectedNumbers(Matrix1, Matrix2, 3, 3);
+
+
+	
 
 
 	system("pause>0");

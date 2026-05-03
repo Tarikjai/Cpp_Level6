@@ -219,6 +219,9 @@
     <ClCompile Include="16_is_Sparce.cpp">
       <Filter>Resource Files\Level_07</Filter>
     </ClCompile>
+    <ClCompile Include="17_Check_Number.cpp">
+      <Filter>Resource Files\Level_07</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyLib.h">
