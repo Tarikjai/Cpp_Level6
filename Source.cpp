@@ -6,7 +6,6 @@
 
 using namespace std;
 
-
 int PrintEachWordInString(string s1) {
 	//cout << "Your String words are : " << endl;
 	cout << endl;
