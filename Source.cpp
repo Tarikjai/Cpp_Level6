@@ -20,10 +20,8 @@ int PrintEachWordInString(string s1) {
 		sWord = s1.substr(0, pos);
 		if (sWord != "") {
 			count++;
-
 			//	cout << sWord << endl;
 		}
-
 		s1.erase(0, pos + delim.length());
 	}
 
@@ -35,10 +33,8 @@ int PrintEachWordInString(string s1) {
 	return count;
 }
 
-
 int main() {
-
-	string   S1 = "Mohammed Abu-Hadhoud @Programming Advices";/* MyLib::AskString("Please  Enter a String?\n");*/
+	string   S1 = "Mohammed Abu-Hadhoud @ProgrammingAdvices";/* MyLib::AskString("Please  Enter a String?\n");*/
 	//	cout << "Your String words are : " << endl; 
 	cout << "The number of words in your string is: ";
 	cout << PrintEachWordInString(S1);
