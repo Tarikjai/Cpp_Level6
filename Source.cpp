@@ -6,7 +6,7 @@
 
 using namespace std;
 
-int PrintEachWordInString(string s1) {
+int CountString(string S1) {
 	//cout << "Your String words are : " << endl;
 	cout << endl;
 
@@ -15,28 +15,60 @@ int PrintEachWordInString(string s1) {
 	string sWord;
 	short count = 0;
 
-	while ((pos = s1.find(delim)) != std::string::npos) {
+	while ((pos = S1.find(delim)) != std::string::npos) {
 
-		sWord = s1.substr(0, pos);
+		sWord = S1.substr(0, pos);
 		if (sWord != "") {
 			count++;
 			//	cout << sWord << endl;
 		}
-		s1.erase(0, pos + delim.length());
+		S1.erase(0, pos + delim.length());
 	}
-
-	if (s1 != "") {
+	if (S1 != "") {
 		count++;
 		// cout << s1 << endl;
 	}
-
 	return count;
+}
+
+string SplitFunction(string S1, vector<string>& Words) {
+
+	string delim = " ";
+	short pos = 0;
+	string sWord;
+	short count = 0;
+
+	while ((pos = S1.find(delim)) != std::string::npos) {
+
+		sWord = S1.substr(0, pos);
+		if (sWord != "") {
+			Words.push_back(sWord);
+		}
+		S1.erase(0, pos + delim.length());
+	}
+	if (S1 != "") {
+		Words.push_back(S1);
+	}
+	return sWord;
+}
+
+void PrintVector(string Words) {
+
+	for (int i : Words) {
+		cout << i << endl;
+	}
+
 }
 
 
 int main() {
-	string   S1 = "Mohammed Abu - Hadhoud @Programming Advices";/* MyLib::AskString("Please  Enter a String?\n");*/
+
+	std::vector<string> Words;
+
+	string   S1 = "Mohammed Abu-Hadhoud @ProgrammingAdvices";/* MyLib::AskString("Please  Enter a String?\n");*/
 	//	cout << "Your String words are : " << endl; 
-	cout << "The number of words in your string is: ";
-	cout << PrintEachWordInString(S1);
+	cout << "Tokens = " << CountString(S1);
+	cout << endl;
+
+	PrintVector(SplitFunction(S1, Words) );
 }
