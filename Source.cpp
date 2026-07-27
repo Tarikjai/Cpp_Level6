@@ -65,7 +65,7 @@ int main() {
 
 	std::vector<string> Words;
 
-	string   S1 = "Mohammed Abu-Hadhoud @ProgrammingAdvices";/* MyLib::AskString("Please  Enter a String?\n");*/
+	string   S1 = "Mohammed Abu-Hadhoud @Programming Advices";/* MyLib::AskString("Please  Enter a String?\n");*/
 	//	cout << "Your String words are : " << endl; 
 	cout << "Tokens = " << CountString(S1);
 	cout << endl;
