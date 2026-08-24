@@ -10,6 +10,7 @@ bool checkVowel(char c) {
 	return (c == 'a') || (c == 'e') || (c == 'i') || (c == 'o') || (c == 'u');
 }
 
+
 void PrintVowels(string   S1) {
 	cout << "Number of vowel is : ";
 	for (int i = 0; i < S1.length(); i++) {
@@ -20,6 +21,6 @@ void PrintVowels(string   S1) {
 }
 
 int main() {
-	string   S1 = MyLib::AskString("Please Enter a String?\n");
+	string   S1 = MyLib::AskString("Please Enter  aa String?\n");
 	PrintVowels(S1);
 }
