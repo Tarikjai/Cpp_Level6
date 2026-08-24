@@ -21,6 +21,6 @@ void PrintVowels(string   S1) {
 }
 
 int main() {
-	string   S1 = MyLib::AskString("Please Enter  aa String?\n");
+	string   S1 = MyLib::AskString("Please Enter a String?\n");
 	PrintVowels(S1);
 }
