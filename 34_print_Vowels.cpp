@@ -12,7 +12,7 @@ bool checkVowel(char c) {
 
 
 void PrintVowels(string   S1) {
-	cout << "Number of vowel is : ";
+	cout << "Number of vowel is: ";
 	for (int i = 0; i < S1.length(); i++) {
 		if (checkVowel(S1[i])) {
 			cout << setw(5) << S1[i];
