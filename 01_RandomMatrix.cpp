@@ -17,7 +17,6 @@ void FillMatrixWithRandomNumbers(int arr[3][3], int Rows, int Column) {
 
 }
 
-
 void PrintMatrix(int arr[3][3], int Rows, int Column) {
 
 	for (int i = 0; i < Rows; i++) {
@@ -25,22 +24,15 @@ void PrintMatrix(int arr[3][3], int Rows, int Column) {
 			cout << setw(3) << arr[i][j] << "   ";
 		}
 		cout << endl;
-
 	}
-
 }
 
 int main() {
 
 	int arr[3][3];
 
-	
 	FillMatrixWithRandomNumbers(arr,3,3);
-	cout << "\n The following iss a randome matrix:\n";
+	cout << "\n The following is a randome matrix:\n";
 	PrintMatrix(arr, 3, 3);
-	
-	 
-
-
 		
 }
