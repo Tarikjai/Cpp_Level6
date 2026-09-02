@@ -36,7 +36,7 @@ int main() {
 
 	
 	FillMatrixWithRandomNumbers(arr,3,3);
-	cout << "\n The following is a randome matrix:\n";
+	cout << "\n The following iss a randome matrix:\n";
 	PrintMatrix(arr, 3, 3);
 	
 	 
