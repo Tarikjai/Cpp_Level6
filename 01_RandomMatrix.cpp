@@ -32,7 +32,7 @@ int main() {
 	int arr[3][3];
 
 	FillMatrixWithRandomNumbers(arr,3,3);
-	cout << "\n The following is a random matrix:\n";
+	cout << "\n The following is a randome matrix:\n";
 	PrintMatrix(arr, 3, 3);
 		
 }
