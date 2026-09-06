@@ -22,16 +22,32 @@ void PrintRandomMatrix(int Matrix[3][3], int row, int cols) {
 		}
 		cout << endl;
 	}
+	cout << endl;
 }
 
-void PrintSum(int Matrix[3][3], int row, int cols) {
-	cout <<
-	for (int i = 0; i < row; i++) {
-		for (int j = 0; j < cols; j++) {
-			cout << setw(3) << Matrix[i][j] << "    ";
+int SumRows(int Matrix[3][3], int row, int cols) {
+	int counter = 0;
+
+	 
+
+		for (int i = 0; i < cols; i++) {
+			counter += Matrix[row][i];
 		}
-		cout << endl;
+		
+		return counter;
+	 
+}
+
+
+void PrintSum(int Matrix[3][3], int row, int cols) {
+	for (int i = 0; i < row; i++) {
+
+	  cout << "Sum " << i+1 <<" row: " << SumRows(Matrix, i, cols) << endl;
+	 
+	
 	}
+	
+	
 }
 
 
@@ -43,4 +59,7 @@ int main() {
 	fillRandomMatrix(Matrix,3, 3);
 	cout << "The following is a 3x3 random matrix: " << endl;
 	PrintRandomMatrix(Matrix,3, 3);
+	
+	cout << "The following are the sum of each row in the matrix:" << endl; 
+	PrintSum(Matrix, 3, 3);
 }
