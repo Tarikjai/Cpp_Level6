@@ -10,7 +10,7 @@ using namespace std;
 void fillRandomMatrix(int Matrix[3][3], int row, int cols) {
 	for (int i = 0; i < row; i++) {
 		for (int j = 0; j < cols; j++) {
-			Matrix[i][j] = MyLib::RandomNumber(1,100);
+			Matrix[i][j] = MyLib::RandomNumber(1,10);
 		}
 	}
 }
@@ -37,10 +37,19 @@ int SumRows(int Matrix[3][3], int row, int cols) {
 }
 
 
-void PrintSum(int Matrix[3][3], int row, int cols) {
+void fillSumArr(int ArrSum[3], int Matrix[3][3], int row, int cols) {
 	for (int i = 0; i < row; i++) {
 
-	  cout << "Sum " << i+1 <<" row: " << SumRows(Matrix, i, cols) << endl;
+		ArrSum[i] = SumRows(Matrix, i, cols)  ;
+
+
+	}
+}
+
+void PrintSum(int ArrSum[3], int row, int cols) {
+	for (int i = 0; i < row; i++) {
+
+	  cout << "Sum " << i+1 <<" row: " << ArrSum[i] << endl;
 	 
 	
 	}
@@ -52,13 +61,15 @@ void PrintSum(int Matrix[3][3], int row, int cols) {
 
 int main() {
 
-	int Matrix1[3][3];
-	int Matrix2[3][3];
+	int Matrix[3][3];
+	int ArrSum[3];
 
-	fillRandomMatrix(Matrix1,3, 3);
+	fillRandomMatrix(Matrix,3, 3);
 	cout << "The following is a 3x3 random matrix: " << endl;
-	PrintRandomMatrix(Matrix1,3, 3);
+	PrintRandomMatrix(Matrix,3, 3);
 	
+	fillSumArr(ArrSum, Matrix, 3, 3);
+
 	cout << "The following are the sum of each row in the matrix:" << endl; 
-	PrintSum(Matrix1, 3, 3);
+	PrintSum(ArrSum, 3, 3);
 }
