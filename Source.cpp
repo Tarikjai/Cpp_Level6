@@ -28,14 +28,12 @@ void PrintRandomMatrix(int Matrix[3][3], int row, int cols) {
 int SumRows(int Matrix[3][3], int row, int cols) {
 	int counter = 0;
 
-	 
-
 		for (int i = 0; i < cols; i++) {
 			counter += Matrix[row][i];
 		}
 		
 		return counter;
-	 
+	
 }
 
 
@@ -54,12 +52,13 @@ void PrintSum(int Matrix[3][3], int row, int cols) {
 
 int main() {
 
-	int Matrix[3][3];
+	int Matrix1[3][3];
+	int Matrix2[3][3];
 
-	fillRandomMatrix(Matrix,3, 3);
+	fillRandomMatrix(Matrix1,3, 3);
 	cout << "The following is a 3x3 random matrix: " << endl;
-	PrintRandomMatrix(Matrix,3, 3);
+	PrintRandomMatrix(Matrix1,3, 3);
 	
 	cout << "The following are the sum of each row in the matrix:" << endl; 
-	PrintSum(Matrix, 3, 3);
+	PrintSum(Matrix1, 3, 3);
 }
