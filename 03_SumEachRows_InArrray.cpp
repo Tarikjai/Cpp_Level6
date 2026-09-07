@@ -51,7 +51,6 @@ void SumMatrixRowsInArray(int arr[3][3], int Rows, int Column, int SumArr[3]) {
 }
 
 
-
 void PrintRowsSumArray(int Arr[3], int Rows) {
 
 	cout << "\nThe following are the sum  for each row in the matrix :\n";
@@ -68,7 +67,7 @@ int main() {
 	int SumArr[3];
 
 	FillMatrixWithRandomNumbers(arr, 3, 3);
-	cout << "\n The following is a 3*3 random matrix:\n";
+	cout << "\n The following is a 3 * 3 random matrix:\n";
 	PrintMatrix(arr, 3, 3);
 
 	SumMatrixRowsInArray(arr, 3, 3, SumArr);
